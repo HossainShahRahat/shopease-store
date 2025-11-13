@@ -1,16 +1,48 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+src/
+├── Common/
+│   ├── Layout/
+│   │   └── MainLayout.jsx
+│   ├── Header/
+│   │   ├── Header.jsx
+│   │   └── Navbar/
+│   │       ├── Navbar.jsx
+│   │       └── ThemeToggle.jsx
+│   ├── Footer/
+│   │   └── Footer.jsx
+│   ├── Product/
+│   │   ├── ProductCard.jsx       // Reusable card for product lists
+│   │   └── ProductForm.jsx       // Reusable form for Add/Update
+│   ├── UI/
+│   │   ├── LoadingSpinner.jsx
+│   │   └── ProtectedRoute.jsx    // Handles auth checks
+│   │   └── AdminRoute.jsx        // Handles admin-only checks
+│   └── Search/
+│       └── SearchFilter.jsx      // Component for product filtering
+│
+├── Pages/
+│   ├── Home/
+│   │   ├── HomePage.jsx
+│   │   ├── Banner/
+│   │   │   └── Banner.jsx
+│   │   └── FeaturedProducts/
+│   │       └── FeaturedProducts.jsx
+│   ├── Products/
+│   │   ├── AllProductsPage.jsx   // Main shop page (GET /products)
+│   │   └── ProductDetailsPage.jsx  // Single product view (GET /products/:id)
+│   ├── Auth/
+│   │   ├── LoginPage.jsx
+│   │   └── RegisterPage.jsx
+│   ├── Cart/
+│   │   └── CartPage.jsx
+│   ├── Checkout/
+│   │   └── CheckoutPage.jsx      // Leads to (POST /orders)
+│   ├── Dashboard/
+│   │   ├── User/
+│   │   │   └── MyOrdersPage.jsx    // (GET /orders/:email)
+│   │   └── Admin/
+│   │       ├── AdminDashboard.jsx    // Main admin view
+│   │       ├── ManageProductsPage.jsx // (POST, PATCH, DELETE /products)
+│   │       └── ManageOrdersPage.jsx  // (GET /orders)
+│
+├── App.jsx                       // Main router setup
+└── main.jsx                      // React Query, React Router setup
