@@ -6,8 +6,6 @@ import SearchFilter from "../../Common/Search/SearchFilter";
 import { motion } from "framer-motion";
 
 // Placeholder function for fetching products.
-// In a real app, this would use 'fetch' or 'axios' to hit the API (e.g., 'GET /products')
-// It would also take filter/search/page parameters.
 const fetchProducts = async () => {
   console.warn(
     "Using placeholder product data. Connect this to your 'GET /products' API."
@@ -17,10 +15,11 @@ const fetchProducts = async () => {
   return new Promise((resolve) =>
     setTimeout(() => {
       resolve([
+        // Updated placeholder URLs
         {
           _id: "1",
           name: "Vintage Leather Wallet",
-          imageUrl: "https://via.placeholder.com/300",
+          imageUrl: "https://placehold.co/300x300/e2e8f0/64748b?text=Product",
           price: 49.99,
           category: "Accessories",
           stock: 10,
@@ -28,7 +27,7 @@ const fetchProducts = async () => {
         {
           _id: "2",
           name: "Wireless Bluetooth Headphones",
-          imageUrl: "https://via.placeholder.com/300",
+          imageUrl: "https://placehold.co/300x300/e2e8f0/64748b?text=Product",
           price: 199.99,
           category: "Electronics",
           stock: 5,
@@ -36,7 +35,7 @@ const fetchProducts = async () => {
         {
           _id: "3",
           name: "Minimalist Wrist Watch",
-          imageUrl: "https://via.placeholder.com/300",
+          imageUrl: "https://placehold.co/300x300/e2e8f0/64748b?text=Product",
           price: 120.0,
           category: "Watches",
           stock: 0,
@@ -44,7 +43,7 @@ const fetchProducts = async () => {
         {
           _id: "4",
           name: "Cotton Blend T-Shirt",
-          imageUrl: "https://via.placeholder.com/300",
+          imageUrl: "https://placehold.co/300x300/e2e8f0/64748b?text=Product",
           price: 25.0,
           category: "Clothing",
           stock: 50,
@@ -52,7 +51,7 @@ const fetchProducts = async () => {
         {
           _id: "5",
           name: "Insulated Coffee Mug",
-          imageUrl: "https://via.placeholder.com/300",
+          imageUrl: "https://placehold.co/300x300/e2e8f0/64748b?text=Product",
           price: 30.0,
           category: "Home Goods",
           stock: 15,
@@ -60,7 +59,7 @@ const fetchProducts = async () => {
         {
           _id: "6",
           name: "Running Shoes",
-          imageUrl: "https://via.placeholder.com/300",
+          imageUrl: "https://placehold.co/300x300/e2e8f0/64748b?text=Product",
           price: 89.99,
           category: "Sports",
           stock: 8,

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { motion } from "framer-motion";
 import { FiLogIn } from "react-icons/fi";
 // import useAuth from '../../hooks/useAuth'; // Will be connected later
 // import toast from 'react-hot-toast';

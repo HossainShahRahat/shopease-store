@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import { FiUsers, FiPackage, FiClipboard, FiDollarSign } from "react-icons/fi";
 
 // Page transition variants

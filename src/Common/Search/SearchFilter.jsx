@@ -42,8 +42,9 @@ const SearchFilter = () => {
     // e.g., onReset();
   };
 
+  // Added px-3 and py-2 for proper input padding
   const inputStyles =
-    "block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white sm:text-sm";
+    "block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white sm:text-sm px-3 py-2";
   const labelStyles =
     "block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1";
 

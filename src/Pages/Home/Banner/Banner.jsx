@@ -85,7 +85,8 @@ const Banner = () => {
           <div className="hidden lg:block relative mt-12 lg:mt-0 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
             <motion.img
               className="h-full w-full object-cover object-center"
-              src="https://via.placeholder.com/800x600?text=ShopEase+Banner" // Replace with a real banner image
+              // Replaced via.placeholder.com with placehold.co
+              src="https://placehold.co/800x600/374151/9CA3AF?text=ShopEase+Banner"
               alt="Promotional banner image"
               initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: 0.8, x: 0 }}

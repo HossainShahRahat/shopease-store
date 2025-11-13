@@ -1,6 +1,7 @@
 import React from "react";
 import Banner from "./Banner/Banner";
 import FeaturedProducts from "./FeaturedProducts/FeaturedProducts";
+import { motion } from "framer-motion";
 
 // Simple page transition variant
 const pageVariants = {

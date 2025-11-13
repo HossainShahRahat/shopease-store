@@ -23,7 +23,11 @@ const ProductCard = ({ product }) => {
         {/* Product Image */}
         <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden bg-gray-100 dark:bg-gray-700">
           <img
-            src={imageUrl || "https://via.placeholder.com/300"}
+            // Updated placeholder URL
+            src={
+              imageUrl ||
+              "https://placehold.co/300x300/e2e8f0/64748b?text=Product"
+            }
             alt={name}
             className="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
           />

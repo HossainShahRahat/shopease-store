@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import LoadingSpinner from "../../../Common/UI/LoadingSpinner";
 import ProductForm from "../../../Common/Product/ProductForm";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import { FiEdit, FiTrash2, FiPlus, FiX } from "react-icons/fi";
 // import toast from 'react-hot-toast';
 // import Swal from 'sweetalert2';
