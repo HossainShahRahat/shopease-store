@@ -1,3 +1,8 @@
+Based on the project documentation, here is the file structure tree.
+
+I've grouped components into a `Common` folder as requested and organized the main views under a `Pages` directory.
+
+```
 src/
 ├── Common/
 │   ├── Layout/
@@ -46,3 +51,4 @@ src/
 │
 ├── App.jsx                       // Main router setup
 └── main.jsx                      // React Query, React Router setup
+```
