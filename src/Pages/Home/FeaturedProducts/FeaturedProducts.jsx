@@ -1,7 +1,7 @@
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
-import ProductCard from "../../Common/Product/ProductCard";
-import LoadingSpinner from "../../Common/UI/LoadingSpinner";
+import ProductCard from "../../../Common/Product/ProductCard";
+import LoadingSpinner from "../../../Common/UI/LoadingSpinner";
 import { Link } from "react-router-dom";
 import { FiArrowRight } from "react-icons/fi";
 

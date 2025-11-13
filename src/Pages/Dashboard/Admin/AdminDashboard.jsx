@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link }S from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { FiUsers, FiPackage, FiClipboard, FiDollarSign } from 'react-icons/fi';
+import React from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { FiUsers, FiPackage, FiClipboard, FiDollarSign } from "react-icons/fi";
 
 // Page transition variants
 const pageVariants = {
@@ -11,17 +11,17 @@ const pageVariants = {
 };
 
 const pageTransition = {
-  type: 'tween',
-  ease: 'anticipate',
+  type: "tween",
+  ease: "anticipate",
   duration: 0.5,
 };
 
 // Card component for dashboard stats
 const StatCard = ({ title, value, icon: Icon, color }) => (
-  <motion.div 
+  <motion.div
     className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 flex items-center space-x-4"
     whileHover={{ y: -5 }}
-    transition={{ type: 'spring', stiffness: 300 }}
+    transition={{ type: "spring", stiffness: 300 }}
   >
     <div className={`p-3 rounded-full ${color} text-white`}>
       <Icon className="w-6 h-6" />
@@ -40,8 +40,12 @@ const StatCard = ({ title, value, icon: Icon, color }) => (
 // Card component for navigation links
 const NavCard = ({ title, description, link, icon: Icon }) => (
   <motion.div
-    whileHover={{ y: -5, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)" }}
-    transition={{ type: 'spring', stiffness: 300 }}
+    whileHover={{
+      y: -5,
+      boxShadow:
+        "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+    }}
+    transition={{ type: "spring", stiffness: 300 }}
     className="bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden"
   >
     <Link to={link} className="block p-6">
@@ -65,7 +69,7 @@ const NavCard = ({ title, description, link, icon: Icon }) => (
 const AdminDashboard = () => {
   // Placeholder data for stats. This will come from an API query.
   const stats = {
-    totalRevenue: '$12,450',
+    totalRevenue: "$12,450",
     totalOrders: 156,
     totalProducts: 78,
     totalCustomers: 42,
@@ -90,10 +94,30 @@ const AdminDashboard = () => {
           Store Overview
         </h2>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          <StatCard title="Total Revenue" value={stats.totalRevenue} icon={FiDollarSign} color="bg-green-500" />
-          <StatCard title="Total Orders" value={stats.totalOrders} icon={FiClipboard} color="bg-blue-500" />
-          <StatCard title="Total Products" value={stats.totalProducts} icon={FiPackage} color="bg-indigo-500" />
-          <StatCard title="Total Customers" value={stats.totalCustomers} icon={FiUsers} color="bg-yellow-500" />
+          <StatCard
+            title="Total Revenue"
+            value={stats.totalRevenue}
+            icon={FiDollarSign}
+            color="bg-green-500"
+          />
+          <StatCard
+            title="Total Orders"
+            value={stats.totalOrders}
+            icon={FiClipboard}
+            color="bg-blue-500"
+          />
+          <StatCard
+            title="Total Products"
+            value={stats.totalProducts}
+            icon={FiPackage}
+            color="bg-indigo-500"
+          />
+          <StatCard
+            title="Total Customers"
+            value={stats.totalCustomers}
+            icon={FiUsers}
+            color="bg-yellow-500"
+          />
         </div>
       </section>
 
@@ -103,13 +127,13 @@ const AdminDashboard = () => {
           Management Tools
         </h2>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-          <NavCard 
+          <NavCard
             title="Manage Products"
             description="Add, edit, and delete products from your inventory."
             link="/dashboard/admin/manage-products"
             icon={FiPackage}
           />
-          <NavCard 
+          <NavCard
             title="Manage Orders"
             description="View and update the status of all customer orders."
             link="/dashboard/admin/manage-orders"
@@ -130,7 +154,6 @@ const AdminDashboard = () => {
           </p>
         </div>
       </section>
-
     </motion.div>
   );
 };

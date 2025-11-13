@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import LoadingSpinner from "../../Common/UI/LoadingSpinner";
+import LoadingSpinner from "../../../Common/UI/LoadingSpinner";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   FiCheckCircle,

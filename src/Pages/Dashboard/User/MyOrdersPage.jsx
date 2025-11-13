@@ -1,7 +1,7 @@
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
-import LoadingSpinner from "../../Common/UI/LoadingSpinner";
+import LoadingSpinner from "../../../Common/UI/LoadingSpinner";
 import { motion } from "framer-motion";
 import {
   FiArchive,
