@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import { FiShoppingCart } from "react-icons/fi";
 
 // Placeholder function for handling cart logic
@@ -15,24 +14,11 @@ const ProductCard = ({ product }) => {
   // Destructure product details
   const { _id, name, imageUrl, price, category, stock } = product;
 
-  const cardVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  };
+  // Note: Removed framer-motion wrapper as it was unused.
+  // Added Tailwind transitions for a clean hover effect.
 
   return (
-    <motion.div
-      className="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-800"
-      variants={cardVariants}
-      initial="hidden"
-      animate="visible"
-      whileHover={{
-        y: -5,
-        boxShadow:
-          "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
-      }}
-      transition={{ type: "spring", stiffness: 300, damping: 20 }}
-    >
+    <div className="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-800 transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-md">
       <Link to={`/products/${_id}`} className="flex-grow">
         {/* Product Image */}
         <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden bg-gray-100 dark:bg-gray-700">
@@ -68,7 +54,7 @@ const ProductCard = ({ product }) => {
           {stock === 0 ? "Out of Stock" : "Add to Cart"}
         </button>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

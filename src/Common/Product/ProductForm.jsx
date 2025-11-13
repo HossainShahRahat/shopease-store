@@ -1,5 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+
+// This form is now designed to be re-mounted when the 'product' prop changes.
+// The parent component should pass a unique 'key' prop, e.g., <ProductForm key={product?._id || 'new'} ... />
+// This avoids the 'set-state-in-effect' lint error by ensuring state initializes fresh.
 
 const ProductForm = ({
   product,
@@ -7,28 +10,16 @@ const ProductForm = ({
   loading,
   submitButtonText = "Submit",
 }) => {
+  // Initialize state directly from the 'product' prop.
+  // This function now only runs ONCE when the component mounts (or re-mounts due to key change).
   const [formData, setFormData] = useState({
-    name: "",
-    imageUrl: "",
-    price: "",
-    stock: "",
-    category: "",
-    description: "",
+    name: product?.name || "",
+    imageUrl: product?.imageUrl || "",
+    price: product?.price || "",
+    stock: product?.stock || "",
+    category: product?.category || "",
+    description: product?.description || "",
   });
-
-  // Effect to populate form when a 'product' prop is passed (for updating)
-  useEffect(() => {
-    if (product) {
-      setFormData({
-        name: product.name || "",
-        imageUrl: product.imageUrl || "",
-        price: product.price || "",
-        stock: product.stock || "",
-        category: product.category || "",
-        description: product.description || "",
-      });
-    }
-  }, [product]);
 
   const handleChange = (e) => {
     const { name, value, type } = e.target;
